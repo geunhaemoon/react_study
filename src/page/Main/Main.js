@@ -1,12 +1,31 @@
 import React, { useState } from 'react';
+import PasswordInput from '../../components/PasswordInput/PasswordInput';
+import UsernameInput from '../../components/UsernameInput/UsernameInput';
+import TodoAddinput from '../../components/TodoAddInput/TodoAddInput';
 
 function Main(props) {
     let todoInputValue = null;
     const [ todoContent, setTodoContent ] = useState("");
-    const [ todoContentArray, setTodoContentArray ] = useState([]);
+    const [todoContentArray, setTodoContentArray] = useState([]);
+    const [user, setUser] = useState({
+        username: "",
+        password:""
+    });
 
     const handleToDoInputChange = (e) => {
         todoInputValue = e.target.value;
+    }
+
+    
+    const handleUserInfoChange = (e) => {
+        const { name, value } = e.target;
+
+        console.log(`name: ${name}, value: ${value}`);
+
+        const userObj = {
+            ...user,
+            [name] : value
+        }
     }
 
     const handleAddClick = () => {
@@ -17,7 +36,13 @@ function Main(props) {
 
     return (
         <div>
-            <input type="text"  onChange={handleToDoInputChange} />
+            <h1>사용자이름 : {user.username}</h1>
+            <h1>비밀번호 : {user.password}</h1>
+            <UsernameInput onChange={handleUserInfoChange} />
+            <PasswordInput onChange={handleUserInfoChange} />
+
+            <TodoAddinput onChange={handleToDoInputChange} />
+
             <button onClick={handleAddClick}> 추가 </button>
             <ul>
                 {/*!!todoContent && (<>{todoContent}</>)*/}
