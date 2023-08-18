@@ -6,7 +6,7 @@ export const SLayout = css`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     margin: 50px auto;
     border: 1px solid #dbdbdb;
     border-radius: 20px;
@@ -32,9 +32,9 @@ export const SProfileImgBox = css`
     align-items: center;
 
     border: 1px solid #dbdbdb;
+    border-radius: 50%;
     width: 300px;
     height: 300px;
-    border-radius: 50%;
     cursor: pointer;
     overflow: hidden;
 `;

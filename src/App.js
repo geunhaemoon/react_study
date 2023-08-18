@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import CustomerInputTest from './page/CustomerInputTest/CustomerInputTest';
 import InputTest from './page/InputTest/InputTest';
 import Main from './page/Main/Main';
@@ -11,7 +12,14 @@ function App() {
       {/* <InputTest /> */}
       {/* <CustomerInputTest /> */}
       {/* <Mypage /> */}
-      <MypageT />
+      {/* <MypageT /> */}
+
+      <Routes>
+        <Route path="/" element={<Main />} /> 
+        <Route path="/customerinputtest" elemnet={<CustomerInputTest /> } /> 
+        <Route path="/inputtest" element={<InputTest/>} /> 
+        <Route path="/mypage" element={<MypageT />} /> 
+      </Routes>
     </>
   );
 }

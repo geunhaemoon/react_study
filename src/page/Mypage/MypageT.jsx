@@ -59,20 +59,20 @@ function MypageT(props) {
                 </div>
             </div>
             <div css={S.SContainer}>
-                <div>
-                    <label htmlFor="username">사용자명 </label>
-                    <input type="text" id='username' name="username" onChange={handleInputChange} defaultValue={user.username}/>
+                <div css={S.SProfileText}>
+                    <label htmlFor="username" css={S.SProfileTextLabel}>사용자명 </label>
+                    <input  css={S.SProfileTextInput} type="text" id='username' name="username" onChange={handleInputChange} defaultValue={user.username}/>
                 </div>
-                <div>
-                    <label htmlFor="name">이름 </label>
-                    <input type="text" id='name' name="name" onChange={handleInputChange} defaultValue={user.name}/>
+                <div css={S.SProfileText}>
+                    <label htmlFor="name" css={S.SProfileTextLabel}>이름 </label>
+                    <input css={S.SProfileTextInput} type="text" id='name' name="name" onChange={handleInputChange} defaultValue={user.name}/>
                 </div>
-                <div>
-                    <label htmlFor="email">이메일 </label>
-                    <input type="text" id='email' name="email" onChange={handleInputChange} defaultValue={user.email}/>
+                <div css={S.SProfileText}>
+                    <label htmlFor="email" css={S.SProfileTextLabel}>이메일 </label>
+                    <input css={S.SProfileTextInput} type="text" id='email' name="email" onChange={handleInputChange} defaultValue={user.email}/>
                 </div>
-                <div>
-                    <button onClick={handleSaveClick}>저장</button>
+                <div css={S.SLoginBtnContainer}>
+                    <button css={S.SSaveBtn} onClick={handleSaveClick}>저장</button>
                 </div>
             </div>
         </div>
